@@ -8,6 +8,7 @@ import NavBar from './components/navbar/NavBar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Summarization from './pages/Summarization';
+import Preview from './pages/Preview';
 import Result from './pages/Result';
 import NotFound from './pages/NotFound';
 import Example from './pages/Example';
@@ -18,7 +19,8 @@ function App() {
       <Routes>
         <Route element={<Layout><Home/></Layout>} path="/" />
         <Route element={<Layout><About/></Layout>} path="/about" />
-        <Route element={<Layout><Summarization/></Layout>} path="/summarization" />
+        <Route element={<Layout navClass='relative'><Summarization/></Layout>} path="/summarization" />
+        <Route element={<Layout><Preview/></Layout>} path="/preview"/>
         <Route element={<Layout><Result/></Layout>} path="/result" />
         <Route element={<Example/>} path="/tes" />
         <Route element={<Layout><NotFound/></Layout>} path="/*" />

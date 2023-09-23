@@ -1,5 +1,4 @@
 import DesktopMenuBtn from "./DesktopMenuBtn"
-// import ContactBtn from "./ContactBtn"
 
 export default function DesktopMenu() {
     return(

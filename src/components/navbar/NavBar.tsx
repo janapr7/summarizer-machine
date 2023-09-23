@@ -5,18 +5,19 @@ import DesktopMenu from './DesktopMenu';
 import DisclosureMenu from './DisclosureMenu';
 import{ Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom';
+import { twMerge } from 'tailwind-merge';
 
-export default function NavBar() {
+export default function NavBar({twClass}:{twClass?:string}) {
   return (
-    <Disclosure as="header" className="bg-background dark:bg-accent sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-30">
+    <Disclosure as="header" className={twMerge("bg-background dark:bg-accent sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-30", twClass)}>
       {({ open }) => (
         <>
           <div className="max-w-8xl lg:py-5">
             <div className="relative flex h-16 justify-between">
               <div className="relative z-10 flex">
-                <div className="flex flex-shrink-0 items-center text-primary dark:text-secondary text-xl lg:text-2xl">
-                  <Link to="/">
-                    <span className='font-bold'>Summarizer</span> {` Machine`}
+                <div className="flex flex-shrink-0 items-center text-primary dark:text-secondary text-lg lg:text-xl">
+                  <Link to="/" className='font-logo'>
+                    <span className='font-bold'>Summarizer</span>{`Machine`}
                   </Link>
                 </div>
               </div>

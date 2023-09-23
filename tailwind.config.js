@@ -4,12 +4,17 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      logo: ["Raleway"],
+      header: ["Oswald"],
+      content: ["DM Sans"],
+    },
     extend: {
       colors: {
-        primary: '#343A40',
+        primary: '#495057',
         secondary: '#CED4DA',
         background: '#DEE2E6',
-        accent: '#495057',
+        accent: '#343A40',
       },
     },
   },
