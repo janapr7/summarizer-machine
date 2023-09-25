@@ -4,7 +4,7 @@ import ActionButton from '../element/ActionButton';
 
 export default function TextAreaForm() {
     const [count, setCount] = useState(0);
-    const textLimit = 10;
+    const textLimit = 2000;
 
     return (
         <>
@@ -17,7 +17,7 @@ export default function TextAreaForm() {
                                 rows={10}
                                 name="teks"
                                 id="teks"
-                                className="font-content block w-full resize-none p-1 pb-2 focus:border-primary dark:focus:border-secondary focus:ring-0 sm:text-sm ring-1 ring-inset ring-primary dark:ring-secondary rounded-md"
+                                className="bg-background dark:bg-accent text-primary dark:text-secondary text-sm font-content block w-full resize-none p-1 pb-2 focus:border-primary dark:focus:border-secondary focus:ring-0 ring-1 ring-inset ring-primary dark:ring-secondary rounded-md"
                                 placeholder="Masukkan Teks (Maksimum 2000 Karakter)"
                                 defaultValue={''}
                                 onChange={(e)=>setCount(e.target.value.length)}
@@ -26,7 +26,7 @@ export default function TextAreaForm() {
                             <div className="flex justify-between mt-3">
                                 <div className="flex items-center space-x-5">
                                     <div className="flow-root font-content">
-                                        {count <= textLimit ? <p className='font-semibold text-primary dark:text-secondary'>{count}/2000 Karakter</p>
+                                        {count <= textLimit ? <p className='font-semibold text-primary dark:text-secondary text-sm'>{count}/2000 Karakter</p>
                                         : <p className='font-semibold text-red-600'>{count}/2000 Karakter</p>}
                                     </div>
                                 </div>

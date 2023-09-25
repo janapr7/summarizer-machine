@@ -9,7 +9,7 @@ import { twMerge } from 'tailwind-merge';
 
 export default function NavBar({twClass}:{twClass?:string}) {
   return (
-    <Disclosure as="header" className={twMerge("bg-background dark:bg-accent sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-30", twClass)}>
+    <Disclosure as="header" className={twMerge("px-5 sm:px-32 md:px-32 lg:px-40 xl:px-56 2xl:px-64 bg-background dark:bg-accent sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-30", twClass)}>
       {({ open }) => (
         <>
           <div className="max-w-8xl lg:py-5">

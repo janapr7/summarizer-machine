@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       logo: ["Raleway"],
-      header: ["Oswald"],
+      header: ["Raleway"],
       content: ["DM Sans"],
     },
     extend: {
